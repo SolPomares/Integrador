@@ -1,13 +1,15 @@
 /* Esta propiedad cambia el modelo de caja predeterminado para que el ancho y alto de los elementos incluyan el padding y el borde,
  y no solo el contenido. Esto facilita el diseño de la página porque el tamaño final de los elementos es más predecible*/
- html {
+html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
 
 /*Esta regla asegura que todos los elementos del documento, así como sus pseudo-elementos before y after, hereden la propiedad box-sizing del elemento raíz html.
  Esto mantiene la consistencia en el modelo de caja a través de todo el documento*/
-*,*:before,*:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -29,4 +31,95 @@ a {
     /*quitar las decoraciones de los enlaces*/
 }
 
+.no-margin{
+    margin: 0;
+}
+
 /*.......*/
+
+.header {
+    background-image: url(../img/thumb-1920-1340586.png);
+    height: 58rem;
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3); /* Ajusta la opacidad según tus preferencias */
+    background-blend-mode: darken;
+}
+
+
+h1 {
+    margin: 0;
+}
+
+@media (min-width:768px) {
+    .barraNavegacion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+a {
+    font-size: 2.4rem;
+    color: white;
+}
+
+.nav {
+    border-radius: 15px;
+}
+
+@media (min-width:768px) {
+    .nav {
+        display: flex;
+        gap: 1.8rem;
+    }
+}
+
+.titulo {
+    border-radius: 15px;
+    text-align: center;
+    color: bisque;
+}
+
+@media (min-width:768px) {
+    .subtitulo{
+        margin-top: 8rem;
+    }
+}
+
+
+.subtitulo {
+    text-align: center;
+    
+    color: white;
+    /* max-width: 800px; /* Ajusta el ancho máximo según tus necesidades 
+    margin-left: auto;
+    margin-right: auto; */
+    font-family: "Caveat", cursive;
+}
+
+
+h2 {
+    font-size: 5rem;
+}
+
+.span{
+    font-weight: 400;
+    color: white;
+}
+
+p {
+    font-size: 4.2rem;
+}
+
+.navegacion_enlace{
+    display: block;
+    text-align: center; 
+
+    &:hover{
+        color: rgb(197, 157, 72);
+    }
+}
+
+
+
